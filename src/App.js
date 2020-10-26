@@ -39,7 +39,7 @@ class App extends React.Component {
     return (
       <div className="item-container">
         <h1>Christmas Wish List</h1>
-        <div className="container shadow-lg">
+        <div className="container shadow">
         
           <ItemList items={this.state.items} handleDelete={this.handleDelete}/>
           <ItemForm handleSubmit={this.handleSubmit}  />

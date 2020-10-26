@@ -29,7 +29,6 @@ class ItemForm extends React.Component {
 
          onFormSubmit = (e) => { 
              e.preventDefault()
-             console.log("HERE IS MY FORM STATE", this.state)
              if(this.state.title === '') return 
              this.props.handleSubmit(this.state)
              this.setState({ 
