@@ -41,7 +41,7 @@ class ItemForm extends React.Component {
      
         render() { 
             return (
-                <div>
+                <div id='component'>
                     <Form onSubmit={this.onFormSubmit} >
                     <FormGroup>
                         <Input type="text"
@@ -51,7 +51,7 @@ class ItemForm extends React.Component {
                          placeholder="All I want for Christmas is ..."
                            />
                     </FormGroup>
-                    <Button>Submit</Button> <Button onClick={this.onFormCancel}>Cancel</Button>
+                    <Button color="success">Submit</Button> <Button onClick={this.onFormCancel} color='danger'>Cancel</Button>
                     </Form>
                 </div>
              );

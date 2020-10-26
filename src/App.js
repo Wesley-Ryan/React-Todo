@@ -37,11 +37,13 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="todo-container">
+      <div className="item-container">
         <h1>Christmas Wish List</h1>
+        <div className="container shadow-lg">
         
-        <ItemList items={this.state.items} handleDelete={this.handleDelete}/>
-        <ItemForm handleSubmit={this.handleSubmit}  />
+          <ItemList items={this.state.items} handleDelete={this.handleDelete}/>
+          <ItemForm handleSubmit={this.handleSubmit}  />
+        </div>
       </div>
     );
   }

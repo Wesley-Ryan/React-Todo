@@ -1,7 +1,23 @@
-.todo-container {
+.item-container {
   text-align: center;
   height: 100vh;
   font-family: "Dancing Script", cursive;
+  border: 5px solid black;
+  background: url("../assets/bg.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+#component {
+  width: 100%;
+}
+
+.container {
+  padding: 2%;
+  border-radius: 5px;
+  background: white;
+  opacity: 0.9;
 }
 
 .wish-list {
@@ -17,6 +33,7 @@
 .wish-list button {
   height: 28px;
   align-self: center;
+  margin-left: 40px;
 }
 
 form {
