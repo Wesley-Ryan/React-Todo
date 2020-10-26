@@ -2,22 +2,19 @@ import React from 'react';
 import { Button, Form, FormGroup, Input} from 'reactstrap';
 import './Todo.css'
 
-const initialFormValues = {  
-        
-        title: '', 
-        completed: false
-}
+
+
 class ItemForm extends React.Component {
      constructor() { 
          super()
          this.state = { 
-             initialFormValues
+            title: '', 
+            completed: false
          }
         }
 
         handleInput = (event) => { 
              this.setState({ 
-                 
                  title: event.target.value, 
                  completed: false
              })
@@ -28,7 +25,10 @@ class ItemForm extends React.Component {
              console.log("HERE IS MY FORM STATE", this.state)
              if(this.state.title === '') return 
              this.props.handleSubmit(this.state)
-             
+             this.setState({ 
+                 title: '', 
+                 completed: false
+              })
          }
          
      
