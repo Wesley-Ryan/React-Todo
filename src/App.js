@@ -1,32 +1,34 @@
 import React from 'react';
-import TodoList from './components/TodoList'
-import TodoForm from './components/TodoForm';
+import ItemList from './components/ItemList'
+import ItemForm from './components/ItemForm';
 import "./components/Todo.css"
 
-const todos = [{ 
-  id: 1, 
-  title: "my todo", 
+const items = [{ 
+  title: "Gift Card", 
   completed: false
 }, 
-{ 
-  id: 2, 
-  title: "my other todo", 
+{  
+  title: "Socks", 
   completed: false
 }]
+
 
 class App extends React.Component {
   constructor(){ 
     super() 
-      this.state= todos
+      this.state= { 
+        items:items
+      }
     }
-    
-    handleAddTodo = () => { 
-      console.log("add new todo")
-    }
-    handleCompletedTodo = () => { 
+
+    handleSubmit = (item) => {
+      this.setState({items: [...this.state.items, item]});
+  }
+
+    handleCompletedItem = () => { 
       console.log("this is completed")
     }
-    handleDeletedTodo = () => { 
+    handleDeletedItem = () => { 
       console.log("remove completed todo")
     }
 
@@ -35,8 +37,9 @@ class App extends React.Component {
     return (
       <div className="todo-container">
         <h1>Christmas Wish List</h1>
-        <TodoList todos={todos} />
-        <TodoForm />
+        
+        <ItemList items={this.state.items} />
+        <ItemForm handleSubmit={this.handleSubmit} handleAddItem={this.handleAddItem} values={this.state.form} />
       </div>
     );
   }
