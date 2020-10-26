@@ -28,8 +28,10 @@ class App extends React.Component {
     handleCompletedItem = () => { 
       console.log("this is completed")
     }
-    handleDeletedItem = () => { 
-      console.log("remove completed todo")
+    handleDelete = (index) => { 
+      const newList = [...this.state.items]
+      newList.splice(index, 1)
+      this.setState({items: newList})
     }
 
 
@@ -38,8 +40,8 @@ class App extends React.Component {
       <div className="todo-container">
         <h1>Christmas Wish List</h1>
         
-        <ItemList items={this.state.items} />
-        <ItemForm handleSubmit={this.handleSubmit} handleAddItem={this.handleAddItem} values={this.state.form} />
+        <ItemList items={this.state.items} handleDelete={this.handleDelete}/>
+        <ItemForm handleSubmit={this.handleSubmit}  />
       </div>
     );
   }

@@ -14,6 +14,10 @@
 .wish-list p {
   margin: 0 25px 0 25px;
 }
+.wish-list button {
+  height: 28px;
+  align-self: center;
+}
 
 form {
   font-family: "Comic Neue", cursive;
