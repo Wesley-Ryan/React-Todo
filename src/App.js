@@ -1,4 +1,7 @@
 import React from 'react';
+import TodoList from './components/TodoList'
+import TodoForm from './components/TodoForm';
+import "./components/Todo.css"
 
 const todos = [{ 
   id: 1, 
@@ -30,8 +33,10 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
-        <h1>Welcome to your Todo App!</h1>
+      <div className="todo-container">
+        <h1>Christmas Wish List</h1>
+        <TodoList todos={todos} />
+        <TodoForm />
       </div>
     );
   }

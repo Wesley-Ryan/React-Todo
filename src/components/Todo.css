@@ -1,0 +1,25 @@
+.todo-container {
+  text-align: center;
+  height: 100vh;
+  font-family: "Dancing Script", cursive;
+}
+
+.wish-list {
+  display: flex;
+  margin: 0 25% 0 25%;
+  font-family: "Comic Neue", cursive;
+  padding: 1%;
+}
+
+.wish-list p {
+  margin: 0 25px 0 25px;
+}
+
+form {
+  font-family: "Comic Neue", cursive;
+  width: 50%;
+  margin: 0 auto;
+}
+form button {
+  margin: 15px;
+}
