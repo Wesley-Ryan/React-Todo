@@ -20,6 +20,13 @@ class ItemForm extends React.Component {
              })
          }
 
+         onFormCancel = () => { 
+            this.setState({ 
+                title: '', 
+                completed: false
+             })
+         }
+
          onFormSubmit = (e) => { 
              e.preventDefault()
              console.log("HERE IS MY FORM STATE", this.state)
@@ -44,7 +51,7 @@ class ItemForm extends React.Component {
                          placeholder="All I want for Christmas is ..."
                            />
                     </FormGroup>
-                    <Button>Submit</Button> <Button>Cancel</Button>
+                    <Button>Submit</Button> <Button onClick={this.onFormCancel}>Cancel</Button>
                     </Form>
                 </div>
              );
