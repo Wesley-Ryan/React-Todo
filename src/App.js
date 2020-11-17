@@ -1,13 +1,48 @@
 import React from 'react';
+import ItemList from './components/ItemList'
+import ItemForm from './components/ItemForm';
+import "./components/Todo.css"
+
+const items = [{ 
+  title: "Gift Card", 
+  completed: false
+}, 
+{  
+  title: "Socks", 
+  completed: false
+}]
+
 
 class App extends React.Component {
-  // you will need a place to store your state in this component.
-  // design `App` to be the parent component of your application.
-  // this component is going to take care of state, and any change handlers you need to work with your state
+  constructor(){ 
+    super() 
+      this.state= { 
+        items:items
+      }
+    }
+
+    handleSubmit = (item) => {
+      this.setState({items: [...this.state.items, item]});
+  }
+
+    handleCompletedItem = () => { 
+      console.log("this is completed")
+    }
+    handleDelete = (index) => { 
+      const newList = [...this.state.items]
+      newList.splice(index, 1)
+      this.setState({items: newList})
+    }
+
+
   render() {
     return (
-      <div>
-        <h2>Welcome to your Todo App!</h2>
+      <div className="item-container">
+        <h1>Christmas Wish List</h1>
+        <div className="container shadow">
+          <ItemList items={this.state.items} handleDelete={this.handleDelete}/>
+          <ItemForm handleSubmit={this.handleSubmit}  />
+        </div>
       </div>
     );
   }

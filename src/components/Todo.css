@@ -1,0 +1,57 @@
+.item-container {
+  text-align: center;
+  height: 100vh;
+  font-family: "Dancing Script", cursive;
+  border: 5px solid black;
+  background: url("../assets/bg.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.item-container h1 {
+  color: white;
+  text-shadow: 3px 3px 10px rgb(243, 205, 123);
+  -webkit-text-stroke: 1px black;
+  font-size: 100px;
+}
+#component {
+  width: 100%;
+}
+
+.container {
+  padding: 2%;
+  border-radius: 5px;
+  background: white;
+  opacity: 0.9;
+}
+
+.wish-list {
+  display: flex;
+  margin: 0 25% 0 25%;
+  font-family: "Comic Neue", cursive;
+  padding: 1%;
+}
+
+.wish-list p {
+  margin: 0 25px 0 25px;
+}
+.wish-list button {
+  height: 28px;
+  align-self: center;
+  margin-left: 40px;
+}
+
+form {
+  font-family: "Comic Neue", cursive;
+  width: 50%;
+  margin: 0 auto;
+}
+form button {
+  margin: 15px;
+}
+
+.completed {
+  text-decoration: line-through;
+}
